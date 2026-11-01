@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +9,24 @@
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Google Fonts: Plus Jakarta Sans -->
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    html { scroll-behavior: smooth; }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased pb-20 md:pb-0">
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-rose-500 selection:text-white pb-20 md:pb-0">
 
-  <!-- 1. ĐỒNG HỒ ĐẾM NGƯỢC TẠO SỰ CẤP BÁCH (TOP BAR STICKY) -->
-  <div class="bg-rose-950 text-white py-2 px-3 sticky top-0 z-40 shadow-md">
+  <!-- 1. TOP BAR CẤP BÁCH STICKY -->
+  <div class="bg-gradient-to-r from-rose-900 via-rose-950 to-purple-950 text-white py-2.5 px-3 sticky top-0 z-40 border-b border-rose-500/20 backdrop-blur-md bg-opacity-90 shadow-lg shadow-rose-950/50">
     <div class="max-w-7xl mx-auto flex flex-row items-center justify-center gap-2 text-xs font-medium text-center">
-      <span class="flex items-center gap-1.5 text-amber-400 font-semibold whitespace-nowrap">
-        <i class="fa-solid fa-fire animate-bounce"></i>
+      <span class="flex items-center gap-1.5 text-amber-300 font-bold tracking-wide uppercase">
+        <i class="fa-solid fa-fire text-amber-400 animate-bounce"></i>
         FLASH SALE GEN Z!
       </span>
-      <p class="text-rose-100 text-xs">
-        Đồng giá từ 99k kết thúc sau: 
-        <span id="countdown" class="font-mono font-bold text-rose-400 bg-rose-900/80 px-2 py-0.5 rounded border border-rose-700/50 ml-0.5">
+      <span class="hidden sm:inline text-rose-300/40">•</span>
+      <p class="text-slate-200 text-xs">
+        Ưu đãi từ 99k kết thúc sau: 
+        <span id="countdown" class="font-mono font-extrabold text-rose-400 bg-slate-900/90 px-2.5 py-0.5 rounded-md border border-rose-500/30 shadow-inner ml-1">
           15:00
         </span>
       </p>
@@ -34,58 +34,58 @@
   </div>
 
   <!-- HERO SECTION & SOCIAL PROOF -->
-  <section class="relative overflow-hidden pt-6 pb-12 md:pt-16 md:pb-24">
-    <!-- Background Glow Effect -->
-    <div class="absolute -top-20 -right-20 w-72 h-72 md:w-96 md:h-96 bg-rose-200/50 rounded-full blur-3xl -z-10 pointer-events-none"></div>
-    <div class="absolute top-1/2 -left-20 w-60 h-60 md:w-80 md:h-80 bg-rose-100/60 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+  <section class="relative overflow-hidden pt-8 pb-16 md:pt-20 md:pb-28">
+    <!-- Background Glow Effects -->
+    <div class="absolute -top-24 -right-24 w-80 h-80 md:w-[500px] md:h-[500px] bg-rose-600/20 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+    <div class="absolute top-1/2 -left-24 w-72 h-72 md:w-[400px] md:h-[400px] bg-purple-600/15 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
         
         <!-- CỘT TRÁI: Nội dung chính -->
-        <div class="lg:col-span-7 space-y-4 md:space-y-6 text-center lg:text-left">
+        <div class="lg:col-span-7 space-y-5 md:space-y-7 text-center lg:text-left">
           
           <!-- Badge Hot Sale -->
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rose-100 border border-rose-200 text-rose-800 text-xs font-semibold tracking-wide uppercase shadow-sm">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs font-semibold tracking-wide uppercase backdrop-blur-md shadow-sm">
             <span class="flex h-2 w-2 relative">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-rose-600"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-rose-500"></span>
             </span>
-            <i class="fa-solid fa-bolt text-rose-600"></i>
+            <i class="fa-solid fa-bolt text-amber-400"></i>
             HOT TREND GEN Z — GIÁ CHỈ TỪ 99K
           </div>
 
-          <!-- Tiêu đề (Chuẩn Mobile: max 24px trên điện thoại) -->
-          <h1 class="text-[22px] sm:text-[24px] md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-snug">
+          <!-- Tiêu đề (Max 24px trên Mobile) -->
+          <h1 class="text-[22px] sm:text-[24px] md:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
             Outfit Đỉnh Cao <br class="hidden sm:inline">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-600 to-amber-600">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-fuchsia-400 to-amber-300">
               Cân Mọi Style Phố Pường
             </span>
           </h1>
 
-          <!-- Phụ đề ngắn -->
-          <p class="text-sm md:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-            Bộ sưu tập Baby Tee, Áo Boxy, Quần Parachute, Sneaker & Dép Bánh Mì cực cuốn. Phối sẵn nguyên Set chuẩn gu Gen Z chỉ từ 100k - 400k.
+          <!-- Phụ đề -->
+          <p class="text-sm md:text-base text-slate-300/90 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+            Bộ sưu tập Baby Tee, Áo Boxy, Quần Parachute, Sneaker & Dép Bánh Mì cực cuốn. Phối sẵn nguyên Set chuẩn gu Gen Z chỉ từ <strong class="text-rose-400 font-bold">100k - 400k</strong>.
           </p>
 
           <!-- Nút CTA Desktop/Tablet -->
-          <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
-            <a href="#order-form" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 text-base md:text-lg font-bold text-white bg-rose-600 hover:bg-rose-700 active:bg-rose-800 rounded-xl shadow-lg shadow-rose-600/30 transition-all duration-200">
-              <i class="fa-solid fa-bag-shopping"></i>
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5">
+            <a href="#order-form" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 text-base md:text-lg font-bold text-white bg-gradient-to-r from-rose-600 to-amber-600 hover:from-rose-500 hover:to-amber-500 active:scale-95 rounded-2xl shadow-lg shadow-rose-600/30 hover:shadow-rose-600/50 transition-all duration-300 group">
+              <i class="fa-solid fa-bag-shopping transition-transform group-hover:-translate-y-0.5"></i>
               Săn Deal Ngay
             </a>
-            <span class="text-xs text-slate-500 flex items-center gap-1">
-              <i class="fa-solid fa-truck-fast text-rose-600"></i> Đồng kiểm khi nhận • Đổi trả 7 ngày
+            <span class="text-xs text-slate-400 flex items-center gap-1.5">
+              <i class="fa-solid fa-shield-halved text-rose-400"></i> Đồng kiểm khi nhận • Đổi trả 7 ngày
             </span>
           </div>
 
           <!-- Khối Social Proof -->
-          <div class="pt-4 md:pt-6 border-t border-slate-200/80 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
-            <div class="flex -space-x-2.5 overflow-hidden">
-              <img class="inline-block h-8 w-8 md:h-10 md:w-10 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Khách 1">
-              <img class="inline-block h-8 w-8 md:h-10 md:w-10 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="Khách 2">
-              <img class="inline-block h-8 w-8 md:h-10 md:w-10 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Khách 3">
-              <img class="inline-block h-8 w-8 md:h-10 md:w-10 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=100&q=80" alt="Khách 4">
+          <div class="pt-5 md:pt-7 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <div class="flex -space-x-3 overflow-hidden">
+              <img class="inline-block h-9 w-9 md:h-10 md:w-10 rounded-full ring-2 ring-slate-900 object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Khách 1">
+              <img class="inline-block h-9 w-9 md:h-10 md:w-10 rounded-full ring-2 ring-slate-900 object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="Khách 2">
+              <img class="inline-block h-8 w-8 md:h-10 md:w-10 rounded-full ring-2 ring-slate-900 object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Khách 3">
+              <img class="inline-block h-8 w-8 md:h-10 md:w-10 rounded-full ring-2 ring-slate-900 object-cover" src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=100&q=80" alt="Khách 4">
             </div>
 
             <div class="text-center sm:text-left">
@@ -95,41 +95,45 @@
                 <i class="fa-solid fa-star text-xs"></i>
                 <i class="fa-solid fa-star text-xs"></i>
                 <i class="fa-solid fa-star text-xs"></i>
-                <span class="ml-1 text-xs font-bold text-slate-800">5.0 / 5.0</span>
+                <span class="ml-1.5 text-xs font-extrabold text-slate-100">5.0 / 5.0</span>
               </div>
-              <p class="text-xs text-slate-600 mt-0.5">
-                Hơn <strong class="text-slate-900 font-semibold">1.000+ tín đồ Gen Z</strong> đã săn đợt này
+              <p class="text-xs text-slate-400 mt-0.5">
+                Hơn <strong class="text-slate-200 font-semibold">1.000+ tín đồ Gen Z</strong> đã chốt đơn thành công
               </p>
             </div>
           </div>
 
         </div>
 
-        <!-- CỘT PHẢI: Hình ảnh sản phẩm (Thời trang Gen Z) -->
+        <!-- CỘT PHẢI: Card Hình ảnh sản phẩm Visual cao cấp -->
         <div class="lg:col-span-5 relative flex justify-center">
           <div class="relative w-full max-w-sm lg:max-w-none">
-            <div class="absolute inset-0 bg-gradient-to-tr from-rose-500 to-amber-300 rounded-2xl transform rotate-2 scale-95 opacity-20 blur-md"></div>
+            <!-- Glow background -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-rose-600 via-fuchsia-600 to-amber-400 rounded-3xl transform rotate-3 scale-95 opacity-30 blur-xl"></div>
             
-            <div class="relative bg-white p-3 md:p-4 rounded-2xl shadow-xl border border-slate-100">
-              <img 
-                src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" 
-                alt="Thời trang Quần áo Giày dép Gen Z" 
-                class="w-full h-72 sm:h-96 object-cover rounded-xl"
-              >
+            <div class="relative bg-slate-900/90 backdrop-blur-xl p-3.5 md:p-5 rounded-3xl border border-slate-800 shadow-2xl">
+              <div class="relative overflow-hidden rounded-2xl group">
+                <img 
+                  src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" 
+                  alt="Thời trang Gen Z" 
+                  class="w-full h-80 sm:h-[400px] object-cover rounded-2xl transition-transform duration-700 group-hover:scale-105"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+              </div>
               
-              <div class="absolute top-6 right-6 bg-slate-900/80 backdrop-blur-md text-white px-2.5 py-1 rounded-lg text-[10px] md:text-xs font-medium flex items-center gap-1 shadow-md">
-                <i class="fa-solid fa-sparkles text-amber-400"></i>
+              <div class="absolute top-7 right-7 bg-slate-950/80 backdrop-blur-md text-amber-300 border border-amber-500/30 px-3 py-1.5 rounded-xl text-[10px] md:text-xs font-semibold flex items-center gap-1.5 shadow-lg">
+                <i class="fa-solid fa-wand-magic-sparkles text-amber-400"></i>
                 <span>Trọn bộ Set Outfit</span>
               </div>
 
-              <!-- Floating Price Card -->
-              <div class="absolute -bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3 rounded-xl shadow-lg border border-slate-100 flex items-center justify-between">
+              <!-- Floating Price Badge -->
+              <div class="absolute -bottom-4 left-4 right-4 bg-slate-900/95 backdrop-blur-md p-3.5 rounded-2xl border border-slate-700/80 shadow-2xl flex items-center justify-between">
                 <div>
                   <p class="text-[10px] text-slate-400 line-through font-medium">500.000đ</p>
-                  <p class="text-base md:text-xl font-extrabold text-rose-600">Từ 99k - 399k</p>
+                  <p class="text-base md:text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-amber-300">Từ 99k - 399k</p>
                 </div>
-                <span class="bg-rose-600 text-white text-[10px] md:text-xs font-bold px-2 py-0.5 rounded">
-                  GIẢM 40%
+                <span class="bg-gradient-to-r from-rose-600 to-rose-500 text-white text-[11px] md:text-xs font-black px-3 py-1 rounded-xl shadow-md">
+                  -40% OFF
                 </span>
               </div>
             </div>
@@ -140,28 +144,28 @@
     </div>
   </section>
 
-  <!-- 2. FORM ĐẶT HÀNG (DẠNG 1 CỘT TRÊN MOBILE) -->
-  <section id="order-form" class="py-10 md:py-16 bg-slate-100 border-t border-slate-200">
+  <!-- 2. FORM ĐẶT HÀNG -->
+  <section id="order-form" class="py-12 md:py-20 bg-slate-900/60 border-t border-slate-800/80 relative">
     <div class="max-w-2xl mx-auto px-4 sm:px-6">
-      <div class="bg-white rounded-2xl md:rounded-3xl p-5 md:p-10 shadow-lg border border-slate-100">
+      <div class="bg-slate-900 rounded-3xl p-6 md:p-10 shadow-2xl border border-slate-800/90 relative overflow-hidden">
         
-        <div class="text-center mb-6">
-          <h2 class="text-xl md:text-3xl font-extrabold text-slate-900">
+        <div class="text-center mb-7">
+          <h2 class="text-xl md:text-3xl font-black text-white tracking-tight">
             Thông Tin Đặt Hàng
           </h2>
-          <p class="text-xs md:text-sm text-slate-500 mt-1">
-            Điền thông tin để shop giữ Slot ưu đãi giảm giá và tư vấn Size nhé!
+          <p class="text-xs md:text-sm text-slate-400 mt-1.5">
+            Điền thông tin để shop giữ Slot ưu đãi giảm giá và tư vấn Size chuẩn nhất!
           </p>
         </div>
 
         <form id="checkoutForm" class="space-y-4" onsubmit="handleOrderSubmit(event)">
           <!-- Họ tên -->
           <div>
-            <label for="fullName" class="block text-xs md:text-sm font-semibold text-slate-700 mb-1">
-              Họ và tên <span class="text-rose-500">*</span>
+            <label for="fullName" class="block text-xs md:text-sm font-semibold text-slate-300 mb-1.5">
+              Họ và tên <span class="text-rose-400">*</span>
             </label>
             <div class="relative">
-              <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 text-xs">
+              <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500 text-xs">
                 <i class="fa-regular fa-user"></i>
               </span>
               <input 
@@ -169,18 +173,18 @@
                 id="fullName" 
                 required 
                 placeholder="Nguyễn Văn A" 
-                class="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 text-xs md:text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                class="w-full pl-10 pr-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 text-xs md:text-sm focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition-all placeholder:text-slate-600"
               >
             </div>
           </div>
 
           <!-- Số điện thoại -->
           <div>
-            <label for="phoneNumber" class="block text-xs md:text-sm font-semibold text-slate-700 mb-1">
-              Số điện thoại <span class="text-rose-500">*</span>
+            <label for="phoneNumber" class="block text-xs md:text-sm font-semibold text-slate-300 mb-1.5">
+              Số điện thoại <span class="text-rose-400">*</span>
             </label>
             <div class="relative">
-              <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 text-xs">
+              <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500 text-xs">
                 <i class="fa-solid fa-phone"></i>
               </span>
               <input 
@@ -189,18 +193,18 @@
                 required 
                 pattern="[0-9]{10,11}"
                 placeholder="0912345678" 
-                class="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 text-xs md:text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                class="w-full pl-10 pr-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 text-xs md:text-sm focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition-all placeholder:text-slate-600"
               >
             </div>
           </div>
 
           <!-- Địa chỉ -->
           <div>
-            <label for="address" class="block text-xs md:text-sm font-semibold text-slate-700 mb-1">
-              Địa chỉ nhận hàng <span class="text-rose-500">*</span>
+            <label for="address" class="block text-xs md:text-sm font-semibold text-slate-300 mb-1.5">
+              Địa chỉ nhận hàng <span class="text-rose-400">*</span>
             </label>
             <div class="relative">
-              <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 text-xs">
+              <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500 text-xs">
                 <i class="fa-solid fa-location-dot"></i>
               </span>
               <input 
@@ -208,7 +212,7 @@
                 id="address" 
                 required 
                 placeholder="Số nhà, đường, quận/huyện, tỉnh/TP" 
-                class="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 text-xs md:text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+                class="w-full pl-10 pr-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 text-xs md:text-sm focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition-all placeholder:text-slate-600"
               >
             </div>
           </div>
@@ -216,7 +220,7 @@
           <!-- Nút Submit Form -->
           <button 
             type="submit" 
-            class="w-full py-3.5 px-4 text-base md:text-lg font-bold text-white bg-rose-600 hover:bg-rose-700 active:bg-rose-800 rounded-xl shadow-md transition-all duration-200 flex items-center justify-center gap-2"
+            class="w-full py-4 px-4 text-base md:text-lg font-extrabold text-white bg-gradient-to-r from-rose-600 to-amber-600 hover:from-rose-500 hover:to-amber-500 active:scale-95 rounded-xl shadow-lg shadow-rose-600/25 transition-all duration-200 flex items-center justify-center gap-2 mt-2"
           >
             <i class="fa-solid fa-bag-shopping"></i>
             MUA NGAY - GIẢM 30%
@@ -227,16 +231,16 @@
     </div>
   </section>
 
-  <!-- 3. STICKY CTA CỐ ĐỊNH Ở ĐÁY MÀN HÌNH ĐIỆN THOẠI (MD:HIDDEN) -->
-  <div class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 p-3 shadow-2xl md:hidden">
+  <!-- 3. STICKY CTA CỐ ĐỊNH ĐÁY MOBILE -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 bg-slate-950/90 backdrop-blur-lg border-t border-slate-800 p-3 shadow-2xl md:hidden">
     <div class="flex items-center justify-between gap-3 max-w-md mx-auto">
       <div>
-        <span class="text-[10px] text-slate-400 line-through">500.000đ</span>
-        <p class="text-base font-extrabold text-rose-600 leading-tight">Từ 99k - 399k</p>
+        <span class="text-[10px] text-slate-500 line-through">500.000đ</span>
+        <p class="text-base font-black text-rose-400 leading-tight">Từ 99k - 399k</p>
       </div>
       <a 
         href="#order-form" 
-        class="flex-1 py-3 px-4 bg-rose-600 hover:bg-rose-700 active:bg-rose-800 text-white font-bold text-sm text-center rounded-xl shadow-md flex items-center justify-center gap-1.5 transition-all"
+        class="flex-1 py-3 px-4 bg-gradient-to-r from-rose-600 to-amber-600 active:scale-95 text-white font-bold text-sm text-center rounded-xl shadow-md flex items-center justify-center gap-1.5 transition-all"
       >
         <i class="fa-solid fa-bag-shopping"></i>
         Đặt hàng ngay
@@ -245,20 +249,20 @@
   </div>
 
   <!-- MODAL CHÚC MỪNG -->
-  <div id="successModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
-    <div class="bg-white rounded-2xl p-6 md:p-8 max-w-sm w-full shadow-2xl border border-slate-100 text-center transform scale-95 transition-transform duration-300">
-      <div class="w-12 h-12 md:w-16 md:h-16 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center mx-auto mb-3 text-xl md:text-2xl">
+  <div id="successModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md hidden opacity-0 transition-all duration-300">
+    <div class="bg-slate-900 rounded-3xl p-6 md:p-8 max-w-sm w-full shadow-2xl border border-slate-800 text-center transform scale-95 transition-transform duration-300">
+      <div class="w-14 h-14 bg-rose-500/10 text-rose-400 border border-rose-500/30 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
         <i class="fa-solid fa-check"></i>
       </div>
 
-      <h3 class="text-xl md:text-2xl font-extrabold text-slate-900 mb-2">Đặt Hàng Thành Công!</h3>
-      <p id="modalMessage" class="text-xs md:text-sm text-slate-600 mb-5 leading-relaxed">
-        <!-- JS điền thông tin động -->
+      <h3 class="text-xl md:text-2xl font-black text-white mb-2">Đặt Hàng Thành Công!</h3>
+      <p id="modalMessage" class="text-xs md:text-sm text-slate-300 mb-6 leading-relaxed">
+        <!-- JS điền thông tin -->
       </p>
 
       <button 
         onclick="closeModal()" 
-        class="w-full py-2.5 px-4 text-xs md:text-sm font-semibold text-white bg-rose-600 hover:bg-rose-700 rounded-lg shadow transition-all"
+        class="w-full py-3 px-4 text-xs md:text-sm font-bold text-white bg-gradient-to-r from-rose-600 to-amber-600 hover:from-rose-500 hover:to-amber-500 rounded-xl shadow-md transition-all"
       >
         Đóng
       </button>
